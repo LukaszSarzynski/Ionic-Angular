@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { OfferBookingsPageRoutingModule } from './offer-bookings-routing.module';
 
 import { OfferBookingsPage } from './offer-bookings.page';
+import { PartialPlaceCardComponent } from 'src/app/partials/partial-place-card/partial-place-card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { OfferBookingsPage } from './offer-bookings.page';
     IonicModule,
     OfferBookingsPageRoutingModule
   ],
-  declarations: [OfferBookingsPage]
+  declarations: [OfferBookingsPage, PartialPlaceCardComponent]
 })
 export class OfferBookingsPageModule {}

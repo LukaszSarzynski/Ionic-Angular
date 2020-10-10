@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { PlaceDetailPageRoutingModule } from './place-detail-routing.module';
 
 import { PlaceDetailPage } from './place-detail.page';
+import { PartialPlaceCardComponent } from 'src/app/partials/partial-place-card/partial-place-card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { PlaceDetailPage } from './place-detail.page';
     IonicModule,
     PlaceDetailPageRoutingModule
   ],
-  declarations: [PlaceDetailPage]
+  declarations: [PlaceDetailPage, PartialPlaceCardComponent]
 })
 export class PlaceDetailPageModule {}

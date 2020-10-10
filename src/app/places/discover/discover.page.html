@@ -7,28 +7,13 @@
 <ion-content padding>
   <ion-grid>
     <ion-row>
-      <ion-col size="12" size-sm="8" offset-sm="2">
-        <ion-card>
-          <ion-card-header>
-            <ion-card-title>
-              {{ aPlaces[0].title }}
-            </ion-card-title>
-            <ion-card-subtitle>
-              Bilet normalny: <strong>{{ aPlaces[0].ticketNormalPrice |  currency:'PLN':'symbol-narrow':'0.2-2':'pl' }} </strong>
-            </ion-card-subtitle>
-          </ion-card-header>
-          <ion-img [src]="aPlaces[0].logoUrl"></ion-img>
-          <ion-card-content>
-            <p>
-              {{ aPlaces[0].description }}
-            </p>
-          </ion-card-content>
-        </ion-card>
+      <ion-col size="12" size-sm="8" offset-sm="2" [routerLink]="['/','places','tabs', 'discover', aPlaces[0].id ]">
+        <partial-place-card [oPlace]="aPlaces[0]"></partial-place-card>
       </ion-col>
     </ion-row>
     <ion-row>
       <ion-col size="12" size-sm="8" offset-sm="2">
-        <ion-item *ngFor="let oPlace of aPlaces.slice(1)">
+        <ion-item detail *ngFor="let oPlace of aPlaces.slice(1)" [routerLink]="['/','places','tabs', 'discover', oPlace.id ]">
           <ion-thumbnail slot="start">
             <ion-img [src]="oPlace.logoUrl"></ion-img>
           </ion-thumbnail>

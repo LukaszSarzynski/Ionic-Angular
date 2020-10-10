@@ -1,0 +1,16 @@
+<ion-card >
+  <ion-card-header>
+    <ion-card-title>
+      {{ oPlace.title }}
+    </ion-card-title>
+    <ion-card-subtitle>
+      Bilet normalny: <strong>{{ oPlace.ticketNormalPrice |  currency:'PLN':'symbol-narrow':'0.2-2':'pl' }} </strong>
+    </ion-card-subtitle>
+  </ion-card-header>
+  <ion-img [src]="oPlace.logoUrl"></ion-img>
+  <ion-card-content>
+    <p>
+      {{ oPlace.description }}
+    </p>
+  </ion-card-content>
+</ion-card>

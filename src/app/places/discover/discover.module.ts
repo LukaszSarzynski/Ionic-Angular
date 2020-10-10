@@ -7,6 +7,7 @@ import { IonicModule } from '@ionic/angular';
 import { DiscoverPageRoutingModule } from './discover-routing.module';
 
 import { DiscoverPage } from './discover.page';
+import { PartialPlaceCardComponent } from 'src/app/partials/partial-place-card/partial-place-card.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,6 @@ import { DiscoverPage } from './discover.page';
     IonicModule,
     DiscoverPageRoutingModule
   ],
-  declarations: [DiscoverPage]
+  declarations: [DiscoverPage, PartialPlaceCardComponent]
 })
 export class DiscoverPageModule {}
