@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Kup bilet</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button (click)="onClose()">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-text-center">
+  <h1>Kliknij aby kupic bilet</h1>
+  <h2>{{oPlace.title}}</h2>
+  <ion-button color="primary" (click)="onBuy()">Kup</ion-button>
+</ion-content>

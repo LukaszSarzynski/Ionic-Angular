@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Place } from '../../place.model';
 import { ActivatedRoute } from '@angular/router';
-import { NavController } from '@ionic/angular';
+import { NavController, ModalController } from '@ionic/angular';
 import { PlacesService } from '../../places.service';
+import { CreateBookingComponent } from 'src/app/bookings/create-booking/create-booking.component';
 
 @Component({
   selector: 'app-place-detail',
@@ -16,7 +17,8 @@ export class PlaceDetailPage implements OnInit {
   constructor(
     private svRoute: ActivatedRoute, 
     private navCtrl: NavController,
-    private svPlaces: PlacesService
+    private svPlaces: PlacesService,
+    private modalCtrl: ModalController
   ) { }
 
   ngOnInit() {
@@ -28,5 +30,19 @@ export class PlaceDetailPage implements OnInit {
         this.oPlace = this.svPlaces.getPlace(o.get('placeId'));
       }
     });
+  }
+
+  onBuy() {
+    this.modalCtrl.create({
+      component: CreateBookingComponent,
+      componentProps: { oPlace: this.oPlace }
+    }).then(o => {
+      o.present();
+      return o.onDidDismiss();
+    }).then(oDismiss => {
+      if (oDismiss.role == 'buy') {
+        console.log(oDismiss.data)
+      }
+    })
   }
 }

@@ -8,6 +8,7 @@ import { PlaceDetailPageRoutingModule } from './place-detail-routing.module';
 
 import { PlaceDetailPage } from './place-detail.page';
 import { PartialPlaceCardComponent } from 'src/app/partials/partial-place-card/partial-place-card.component';
+import { CreateBookingComponent } from 'src/app/bookings/create-booking/create-booking.component';
 
 @NgModule({
   imports: [
@@ -16,6 +17,8 @@ import { PartialPlaceCardComponent } from 'src/app/partials/partial-place-card/p
     IonicModule,
     PlaceDetailPageRoutingModule
   ],
-  declarations: [PlaceDetailPage, PartialPlaceCardComponent]
+  declarations: [PlaceDetailPage, PartialPlaceCardComponent, CreateBookingComponent]
 })
-export class PlaceDetailPageModule {}
+export class PlaceDetailPageModule {
+
+}
